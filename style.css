@@ -1,0 +1,293 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #ffffff;
+  z-index: 60;
+}
+
+.header-logo {
+  position: relative;
+}
+
+.humburger {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+.humburger span {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  left: 15px;
+  background-color: #121212;
+  transition: 0.8s;
+}
+
+.humburger span:nth-child(1) {
+  top: 15px;
+}
+
+.humburger span:nth-child(2) {
+  top: 27px;
+}
+
+.humburger span:nth-child(3) {
+  top: 40px;
+}
+
+#navi {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-700px);
+}
+
+#navi.active {
+  background-color: #121212;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  font-size: 15px;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-5px);
+  transition: 0.5s;
+}
+
+.nav-menu {
+  padding: 40px 30px 0 25px;
+}
+
+.nav-list {
+  border-top: 1px solid #ffffff;
+  width: 100%;
+}
+
+.nav-list-sns {
+  padding-bottom: 15px;
+}
+
+.nav-list-sns:nth-child(4) {
+  margin-top: 60px;
+}
+
+.nav-list:nth-child(3) {
+  border-bottom: 1px solid #ffffff;
+}
+
+.active.humburger span:nth-child(1) {
+  top: 15px;
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.active.humburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.active.humburger span:nth-child(3) {
+  top: 35px;
+  transform: translateY(-10px) rotate(315deg);
+}
+
+#bg-video {
+  width: 100%;
+  margin-top: 80px;
+  z-index: 10;
+}
+
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.slick-arrow {
+  opacity: 0;
+}
+
+.pickup-contents-list img {
+  width: 100%;
+  padding: 35px;
+  height: auto; /* 画像が縦横比を維持して縮小されるように */
+}
+
+.pickup-contents {
+  display: block;
+}
+
+.pickup-contents-list {
+  width: 200px;
+}
+
+.feature-contents {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 25px;
+  place-content: center;
+}
+
+.feature-item {
+  box-shadow: 0 0 8px 4px #ccc;
+}
+
+.item-list {
+  padding: 20px 20px;
+}
+
+.item-title {
+  padding-bottom: 15px;
+}
+
+.item-date {
+  text-align: end;
+  padding-top: 20px;
+}
+
+.item-text {
+  font-weight: bold;
+}
+
+#contact {
+  background-color: #121212;
+  color: #ffffff;
+  padding-bottom: 50px;
+}
+
+#contact h2 {
+  padding-top: 30px;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.info-text {
+  padding-bottom: 30px;
+}
+
+.contact-form {
+  width: 45%;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.contact-form input {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.contact-form textarea {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.contact-form dd {
+  padding-bottom: 20px;
+}
+
+.form-btn {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  text-align: center;
+  align-content: center;
+}
+
+.form-btn:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+#footer {
+  background-color: #121212;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+#footer p {
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  #bg-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .sec-title {
+    margin: 60px 0 20px 0;
+    font-size: 25px;
+  }
+  .pickup-contents-list img {
+    padding-top: 0;
+  }
+  .feature-contents {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .feature-item {
+    margin-bottom: 25px;
+  }
+  .contact-content {
+    display: block;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+  .form-btn {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
